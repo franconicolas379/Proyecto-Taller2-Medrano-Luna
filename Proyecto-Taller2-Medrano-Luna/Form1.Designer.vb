@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,33 +20,55 @@ Partial Class Form1
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblBienvenido = New System.Windows.Forms.Label()
+        Me.lblPrincip = New System.Windows.Forms.Label()
         Me.btnCerrPrinc = New System.Windows.Forms.Button()
-        Me.btnUsuarios = New System.Windows.Forms.Button()
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.btnProduc = New System.Windows.Forms.Button()
         Me.btnVentas = New System.Windows.Forms.Button()
         Me.btnReport = New System.Windows.Forms.Button()
         Me.btnBkp = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lblPrincip = New System.Windows.Forms.Label()
+        Me.pnlAdmin = New System.Windows.Forms.Panel()
+        Me.btnUsuarios = New System.Windows.Forms.Button()
+        Me.pnlContenedor = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.pnlAdmin.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.lblBienvenido)
         Me.Panel1.Controls.Add(Me.lblPrincip)
         Me.Panel1.Controls.Add(Me.btnCerrPrinc)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1003, 32)
+        Me.Panel1.Size = New System.Drawing.Size(940, 32)
         Me.Panel1.TabIndex = 1
+        '
+        'lblBienvenido
+        '
+        Me.lblBienvenido.AutoSize = True
+        Me.lblBienvenido.Location = New System.Drawing.Point(22, 9)
+        Me.lblBienvenido.Name = "lblBienvenido"
+        Me.lblBienvenido.Size = New System.Drawing.Size(63, 13)
+        Me.lblBienvenido.TabIndex = 11
+        Me.lblBienvenido.Text = "Bienvenido:"
+        '
+        'lblPrincip
+        '
+        Me.lblPrincip.AutoSize = True
+        Me.lblPrincip.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrincip.Location = New System.Drawing.Point(488, 9)
+        Me.lblPrincip.Name = "lblPrincip"
+        Me.lblPrincip.Size = New System.Drawing.Size(46, 17)
+        Me.lblPrincip.TabIndex = 4
+        Me.lblPrincip.Text = "Inicio"
         '
         'btnCerrPrinc
         '
@@ -56,28 +78,12 @@ Partial Class Form1
         Me.btnCerrPrinc.FlatAppearance.BorderSize = 0
         Me.btnCerrPrinc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrPrinc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrPrinc.Location = New System.Drawing.Point(967, 3)
+        Me.btnCerrPrinc.Location = New System.Drawing.Point(904, 3)
         Me.btnCerrPrinc.Name = "btnCerrPrinc"
         Me.btnCerrPrinc.Size = New System.Drawing.Size(33, 26)
         Me.btnCerrPrinc.TabIndex = 3
         Me.btnCerrPrinc.Text = "X"
         Me.btnCerrPrinc.UseVisualStyleBackColor = False
-        '
-        'btnUsuarios
-        '
-        Me.btnUsuarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnUsuarios.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.btnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnUsuarios.FlatAppearance.BorderSize = 0
-        Me.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUsuarios.Location = New System.Drawing.Point(8, 38)
-        Me.btnUsuarios.Name = "btnUsuarios"
-        Me.btnUsuarios.Size = New System.Drawing.Size(135, 50)
-        Me.btnUsuarios.TabIndex = 4
-        Me.btnUsuarios.Text = "Usuarios"
-        Me.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnUsuarios.UseVisualStyleBackColor = False
         '
         'btnClientes
         '
@@ -87,7 +93,7 @@ Partial Class Form1
         Me.btnClientes.FlatAppearance.BorderSize = 0
         Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClientes.Location = New System.Drawing.Point(8, 94)
+        Me.btnClientes.Location = New System.Drawing.Point(5, 62)
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.Size = New System.Drawing.Size(135, 50)
         Me.btnClientes.TabIndex = 5
@@ -103,7 +109,7 @@ Partial Class Form1
         Me.btnProduc.FlatAppearance.BorderSize = 0
         Me.btnProduc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnProduc.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProduc.Location = New System.Drawing.Point(8, 150)
+        Me.btnProduc.Location = New System.Drawing.Point(5, 118)
         Me.btnProduc.Name = "btnProduc"
         Me.btnProduc.Size = New System.Drawing.Size(135, 50)
         Me.btnProduc.TabIndex = 6
@@ -119,7 +125,7 @@ Partial Class Form1
         Me.btnVentas.FlatAppearance.BorderSize = 0
         Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVentas.Location = New System.Drawing.Point(8, 206)
+        Me.btnVentas.Location = New System.Drawing.Point(5, 174)
         Me.btnVentas.Name = "btnVentas"
         Me.btnVentas.Size = New System.Drawing.Size(135, 50)
         Me.btnVentas.TabIndex = 7
@@ -135,7 +141,7 @@ Partial Class Form1
         Me.btnReport.FlatAppearance.BorderSize = 0
         Me.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReport.Location = New System.Drawing.Point(8, 262)
+        Me.btnReport.Location = New System.Drawing.Point(5, 230)
         Me.btnReport.Name = "btnReport"
         Me.btnReport.Size = New System.Drawing.Size(135, 50)
         Me.btnReport.TabIndex = 8
@@ -151,7 +157,7 @@ Partial Class Form1
         Me.btnBkp.FlatAppearance.BorderSize = 0
         Me.btnBkp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBkp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBkp.Location = New System.Drawing.Point(8, 318)
+        Me.btnBkp.Location = New System.Drawing.Point(5, 286)
         Me.btnBkp.Name = "btnBkp"
         Me.btnBkp.Size = New System.Drawing.Size(135, 50)
         Me.btnBkp.TabIndex = 9
@@ -161,13 +167,13 @@ Partial Class Form1
         '
         'btnSalir
         '
-        Me.btnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnSalir.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnSalir.FlatAppearance.BorderSize = 0
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.Location = New System.Drawing.Point(8, 486)
+        Me.btnSalir.Location = New System.Drawing.Point(5, 398)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(135, 50)
         Me.btnSalir.TabIndex = 10
@@ -175,59 +181,78 @@ Partial Class Form1
         Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSalir.UseVisualStyleBackColor = False
         '
-        'Panel2
+        'pnlAdmin
         '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.btnSalir)
-        Me.Panel2.Controls.Add(Me.btnUsuarios)
-        Me.Panel2.Controls.Add(Me.btnClientes)
-        Me.Panel2.Controls.Add(Me.btnProduc)
-        Me.Panel2.Controls.Add(Me.btnVentas)
-        Me.Panel2.Controls.Add(Me.btnReport)
-        Me.Panel2.Controls.Add(Me.btnBkp)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 32)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(143, 555)
-        Me.Panel2.TabIndex = 11
+        Me.pnlAdmin.BackColor = System.Drawing.Color.White
+        Me.pnlAdmin.Controls.Add(Me.btnSalir)
+        Me.pnlAdmin.Controls.Add(Me.btnUsuarios)
+        Me.pnlAdmin.Controls.Add(Me.btnClientes)
+        Me.pnlAdmin.Controls.Add(Me.btnProduc)
+        Me.pnlAdmin.Controls.Add(Me.btnVentas)
+        Me.pnlAdmin.Controls.Add(Me.btnReport)
+        Me.pnlAdmin.Controls.Add(Me.btnBkp)
+        Me.pnlAdmin.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlAdmin.Location = New System.Drawing.Point(0, 32)
+        Me.pnlAdmin.Name = "pnlAdmin"
+        Me.pnlAdmin.Size = New System.Drawing.Size(140, 460)
+        Me.pnlAdmin.TabIndex = 11
         '
-        'lblPrincip
+        'btnUsuarios
         '
-        Me.lblPrincip.AutoSize = True
-        Me.lblPrincip.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrincip.Location = New System.Drawing.Point(488, 9)
-        Me.lblPrincip.Name = "lblPrincip"
-        Me.lblPrincip.Size = New System.Drawing.Size(46, 17)
-        Me.lblPrincip.TabIndex = 4
-        Me.lblPrincip.Text = "Inicio"
+        Me.btnUsuarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnUsuarios.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnUsuarios.FlatAppearance.BorderSize = 0
+        Me.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUsuarios.Location = New System.Drawing.Point(5, 6)
+        Me.btnUsuarios.Name = "btnUsuarios"
+        Me.btnUsuarios.Size = New System.Drawing.Size(135, 50)
+        Me.btnUsuarios.TabIndex = 4
+        Me.btnUsuarios.Text = "Usuarios"
+        Me.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnUsuarios.UseVisualStyleBackColor = False
+        '
+        'pnlContenedor
+        '
+        Me.pnlContenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlContenedor.Location = New System.Drawing.Point(140, 32)
+        Me.pnlContenedor.Name = "pnlContenedor"
+        Me.pnlContenedor.Size = New System.Drawing.Size(800, 460)
+        Me.pnlContenedor.TabIndex = 13
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1003, 587)
-        Me.Controls.Add(Me.Panel2)
+        Me.ClientSize = New System.Drawing.Size(940, 492)
+        Me.Controls.Add(Me.pnlContenedor)
+        Me.Controls.Add(Me.pnlAdmin)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.IsMdiContainer = True
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Principal"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
+        Me.pnlAdmin.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnCerrPrinc As Button
-    Friend WithEvents btnUsuarios As Button
     Friend WithEvents btnClientes As Button
     Friend WithEvents btnProduc As Button
     Friend WithEvents btnVentas As Button
     Friend WithEvents btnReport As Button
     Friend WithEvents btnBkp As Button
     Friend WithEvents btnSalir As Button
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlAdmin As Panel
     Friend WithEvents lblPrincip As Label
+    Friend WithEvents pnlContenedor As Panel
+    Friend WithEvents lblBienvenido As Label
+    Friend WithEvents btnUsuarios As Button
 End Class

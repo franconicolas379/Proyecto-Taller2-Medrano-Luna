@@ -33,7 +33,7 @@ Partial Class FormBkp
         Me.btnBkp.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnBkp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBkp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBkp.Location = New System.Drawing.Point(346, 321)
+        Me.btnBkp.Location = New System.Drawing.Point(340, 321)
         Me.btnBkp.Name = "btnBkp"
         Me.btnBkp.Size = New System.Drawing.Size(121, 41)
         Me.btnBkp.TabIndex = 0
@@ -44,7 +44,7 @@ Partial Class FormBkp
         '
         Me.lblBkp.AutoSize = True
         Me.lblBkp.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBkp.Location = New System.Drawing.Point(28, 55)
+        Me.lblBkp.Location = New System.Drawing.Point(22, 55)
         Me.lblBkp.Name = "lblBkp"
         Me.lblBkp.Size = New System.Drawing.Size(757, 54)
         Me.lblBkp.TabIndex = 1
@@ -54,7 +54,7 @@ Partial Class FormBkp
         '
         Me.lblActual.AutoSize = True
         Me.lblActual.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblActual.Location = New System.Drawing.Point(180, 239)
+        Me.lblActual.Location = New System.Drawing.Point(174, 239)
         Me.lblActual.Name = "lblActual"
         Me.lblActual.Size = New System.Drawing.Size(166, 18)
         Me.lblActual.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class FormBkp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(813, 526)
+        Me.ClientSize = New System.Drawing.Size(800, 460)
         Me.Controls.Add(Me.lblActual)
         Me.Controls.Add(Me.lblBkp)
         Me.Controls.Add(Me.btnBkp)

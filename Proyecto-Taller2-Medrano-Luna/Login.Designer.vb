@@ -38,7 +38,7 @@ Partial Class Login
         '
         'pnlLogTop
         '
-        Me.pnlLogTop.BackColor = System.Drawing.SystemColors.Info
+        Me.pnlLogTop.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.pnlLogTop.Controls.Add(Me.Label1)
         Me.pnlLogTop.Controls.Add(Me.Button1)
         Me.pnlLogTop.Dock = System.Windows.Forms.DockStyle.Top
@@ -72,7 +72,7 @@ Partial Class Login
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Silver
+        Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.btnCancelar)
         Me.Panel2.Controls.Add(Me.btnIngresar)
         Me.Panel2.Controls.Add(Me.txtContr)
@@ -87,7 +87,7 @@ Partial Class Login
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnCancelar.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnCancelar.FlatAppearance.BorderSize = 0
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -100,7 +100,7 @@ Partial Class Login
         '
         'btnIngresar
         '
-        Me.btnIngresar.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnIngresar.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnIngresar.FlatAppearance.BorderSize = 0
         Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
