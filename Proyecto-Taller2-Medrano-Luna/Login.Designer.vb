@@ -26,6 +26,7 @@ Partial Class Login
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BBorrar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.txtContr = New System.Windows.Forms.TextBox()
@@ -38,7 +39,7 @@ Partial Class Login
         '
         'pnlLogTop
         '
-        Me.pnlLogTop.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.pnlLogTop.BackColor = System.Drawing.Color.LightCyan
         Me.pnlLogTop.Controls.Add(Me.Label1)
         Me.pnlLogTop.Controls.Add(Me.Button1)
         Me.pnlLogTop.Dock = System.Windows.Forms.DockStyle.Top
@@ -52,7 +53,7 @@ Partial Class Login
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(122, 9)
+        Me.Label1.Location = New System.Drawing.Point(132, 10)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(53, 20)
         Me.Label1.TabIndex = 0
@@ -73,6 +74,7 @@ Partial Class Login
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.BBorrar)
         Me.Panel2.Controls.Add(Me.btnCancelar)
         Me.Panel2.Controls.Add(Me.btnIngresar)
         Me.Panel2.Controls.Add(Me.txtContr)
@@ -85,15 +87,28 @@ Partial Class Login
         Me.Panel2.Size = New System.Drawing.Size(317, 454)
         Me.Panel2.TabIndex = 1
         '
+        'BBorrar
+        '
+        Me.BBorrar.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.BBorrar.FlatAppearance.BorderSize = 0
+        Me.BBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BBorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BBorrar.Location = New System.Drawing.Point(125, 330)
+        Me.BBorrar.Name = "BBorrar"
+        Me.BBorrar.Size = New System.Drawing.Size(73, 29)
+        Me.BBorrar.TabIndex = 6
+        Me.BBorrar.Text = "Borrar"
+        Me.BBorrar.UseVisualStyleBackColor = False
+        '
         'btnCancelar
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnCancelar.FlatAppearance.BorderSize = 0
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.Location = New System.Drawing.Point(162, 403)
+        Me.btnCancelar.Location = New System.Drawing.Point(231, 330)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(87, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(74, 29)
         Me.btnCancelar.TabIndex = 5
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -104,9 +119,9 @@ Partial Class Login
         Me.btnIngresar.FlatAppearance.BorderSize = 0
         Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngresar.Location = New System.Drawing.Point(68, 403)
+        Me.btnIngresar.Location = New System.Drawing.Point(12, 330)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(88, 23)
+        Me.btnIngresar.Size = New System.Drawing.Size(75, 29)
         Me.btnIngresar.TabIndex = 4
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
@@ -116,8 +131,9 @@ Partial Class Login
         Me.txtContr.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.txtContr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtContr.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContr.Location = New System.Drawing.Point(80, 257)
+        Me.txtContr.Location = New System.Drawing.Point(80, 219)
         Me.txtContr.Name = "txtContr"
+        Me.txtContr.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContr.Size = New System.Drawing.Size(156, 26)
         Me.txtContr.TabIndex = 3
         '
@@ -126,7 +142,7 @@ Partial Class Login
         Me.txtUsuar.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.txtUsuar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtUsuar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsuar.Location = New System.Drawing.Point(80, 118)
+        Me.txtUsuar.Location = New System.Drawing.Point(80, 108)
         Me.txtUsuar.Name = "txtUsuar"
         Me.txtUsuar.Size = New System.Drawing.Size(156, 26)
         Me.txtUsuar.TabIndex = 2
@@ -136,7 +152,7 @@ Partial Class Login
         Me.pnlContrLog.AutoSize = True
         Me.pnlContrLog.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnlContrLog.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.pnlContrLog.Location = New System.Drawing.Point(123, 197)
+        Me.pnlContrLog.Location = New System.Drawing.Point(111, 199)
         Me.pnlContrLog.Name = "pnlContrLog"
         Me.pnlContrLog.Size = New System.Drawing.Size(91, 17)
         Me.pnlContrLog.TabIndex = 1
@@ -147,7 +163,7 @@ Partial Class Login
         Me.pnlUsuarioLog.AutoSize = True
         Me.pnlUsuarioLog.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnlUsuarioLog.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.pnlUsuarioLog.Location = New System.Drawing.Point(133, 88)
+        Me.pnlUsuarioLog.Location = New System.Drawing.Point(123, 88)
         Me.pnlUsuarioLog.Name = "pnlUsuarioLog"
         Me.pnlUsuarioLog.Size = New System.Drawing.Size(64, 17)
         Me.pnlUsuarioLog.TabIndex = 0
@@ -162,6 +178,7 @@ Partial Class Login
         Me.Controls.Add(Me.pnlLogTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.pnlLogTop.ResumeLayout(False)
         Me.pnlLogTop.PerformLayout()
@@ -181,4 +198,5 @@ Partial Class Login
     Friend WithEvents pnlUsuarioLog As Label
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnIngresar As Button
+    Friend WithEvents BBorrar As Button
 End Class

@@ -22,99 +22,144 @@ Partial Class FormReportes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormReportes))
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Me.PReportes = New System.Windows.Forms.Panel()
+        Me.LReportes = New System.Windows.Forms.Label()
+        Me.btnExportar = New System.Windows.Forms.Button()
+        Me.CGrafico = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.DTdesde = New System.Windows.Forms.DateTimePicker()
+        Me.DThasta = New System.Windows.Forms.DateTimePicker()
+        Me.LDesde = New System.Windows.Forms.Label()
+        Me.LHasta = New System.Windows.Forms.Label()
+        Me.PReportes.SuspendLayout()
+        CType(Me.CGrafico, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'PReportes
         '
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.RadioButton2)
-        Me.Panel1.Controls.Add(Me.RadioButton1)
-        Me.Panel1.Controls.Add(Me.Chart1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(800, 460)
-        Me.Panel1.TabIndex = 0
+        Me.PReportes.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.PReportes.Controls.Add(Me.LHasta)
+        Me.PReportes.Controls.Add(Me.LDesde)
+        Me.PReportes.Controls.Add(Me.DThasta)
+        Me.PReportes.Controls.Add(Me.DTdesde)
+        Me.PReportes.Controls.Add(Me.LReportes)
+        Me.PReportes.Controls.Add(Me.btnExportar)
+        Me.PReportes.Controls.Add(Me.CGrafico)
+        Me.PReportes.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PReportes.Location = New System.Drawing.Point(0, 0)
+        Me.PReportes.Name = "PReportes"
+        Me.PReportes.Size = New System.Drawing.Size(800, 460)
+        Me.PReportes.TabIndex = 0
         '
-        'Chart1
+        'LReportes
         '
-        Me.Chart1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.LReportes.AutoSize = True
+        Me.LReportes.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LReportes.Location = New System.Drawing.Point(338, 19)
+        Me.LReportes.Name = "LReportes"
+        Me.LReportes.Size = New System.Drawing.Size(125, 30)
+        Me.LReportes.TabIndex = 4
+        Me.LReportes.Text = "Reportes"
+        '
+        'btnExportar
+        '
+        Me.btnExportar.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnExportar.FlatAppearance.BorderSize = 0
+        Me.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExportar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportar.Image = CType(resources.GetObject("btnExportar.Image"), System.Drawing.Image)
+        Me.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExportar.Location = New System.Drawing.Point(687, 395)
+        Me.btnExportar.Name = "btnExportar"
+        Me.btnExportar.Size = New System.Drawing.Size(101, 40)
+        Me.btnExportar.TabIndex = 3
+        Me.btnExportar.Text = "Exportar"
+        Me.btnExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExportar.UseVisualStyleBackColor = False
+        '
+        'CGrafico
+        '
+        Me.CGrafico.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(12, 130)
-        Me.Chart1.Name = "Chart1"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(465, 318)
-        Me.Chart1.TabIndex = 0
-        Me.Chart1.Text = "Chart1"
+        Me.CGrafico.BorderlineColor = System.Drawing.SystemColors.WindowText
+        Me.CGrafico.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash
+        ChartArea2.Name = "ChartArea1"
+        Me.CGrafico.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.CGrafico.Legends.Add(Legend2)
+        Me.CGrafico.Location = New System.Drawing.Point(12, 117)
+        Me.CGrafico.Name = "CGrafico"
+        Me.CGrafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.CGrafico.Series.Add(Series2)
+        Me.CGrafico.Size = New System.Drawing.Size(465, 318)
+        Me.CGrafico.TabIndex = 0
+        Me.CGrafico.Text = "Chart1"
         '
-        'RadioButton1
+        'DTdesde
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(597, 190)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton1.TabIndex = 1
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "RadioButton1"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.DTdesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTdesde.Location = New System.Drawing.Point(604, 143)
+        Me.DTdesde.Name = "DTdesde"
+        Me.DTdesde.Size = New System.Drawing.Size(104, 20)
+        Me.DTdesde.TabIndex = 5
         '
-        'RadioButton2
+        'DThasta
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(588, 140)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton2.TabIndex = 2
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "RadioButton2"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.DThasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DThasta.Location = New System.Drawing.Point(604, 271)
+        Me.DThasta.Name = "DThasta"
+        Me.DThasta.Size = New System.Drawing.Size(104, 20)
+        Me.DThasta.TabIndex = 6
         '
-        'Button1
+        'LDesde
         '
-        Me.Button1.Location = New System.Drawing.Point(628, 344)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.LDesde.AutoSize = True
+        Me.LDesde.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LDesde.Location = New System.Drawing.Point(546, 149)
+        Me.LDesde.Name = "LDesde"
+        Me.LDesde.Size = New System.Drawing.Size(47, 13)
+        Me.LDesde.TabIndex = 11
+        Me.LDesde.Text = "Desde:"
+        '
+        'LHasta
+        '
+        Me.LHasta.AutoSize = True
+        Me.LHasta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LHasta.Location = New System.Drawing.Point(549, 278)
+        Me.LHasta.Name = "LHasta"
+        Me.LHasta.Size = New System.Drawing.Size(44, 13)
+        Me.LHasta.TabIndex = 12
+        Me.LHasta.Text = "Hasta:"
         '
         'FormReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 460)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PReportes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormReportes"
         Me.Text = "FormReportes"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PReportes.ResumeLayout(False)
+        Me.PReportes.PerformLayout()
+        CType(Me.CGrafico, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents PReportes As Panel
+    Friend WithEvents btnExportar As Button
+    Friend WithEvents CGrafico As DataVisualization.Charting.Chart
+    Friend WithEvents LReportes As Label
+    Friend WithEvents DThasta As DateTimePicker
+    Friend WithEvents DTdesde As DateTimePicker
+    Friend WithEvents LHasta As Label
+    Friend WithEvents LDesde As Label
 End Class

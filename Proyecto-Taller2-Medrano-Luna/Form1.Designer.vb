@@ -22,6 +22,8 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblBienvenido = New System.Windows.Forms.Label()
         Me.lblPrincip = New System.Windows.Forms.Label()
@@ -35,26 +37,30 @@ Partial Class Form1
         Me.pnlAdmin = New System.Windows.Forms.Panel()
         Me.btnUsuarios = New System.Windows.Forms.Button()
         Me.pnlContenedor = New System.Windows.Forms.Panel()
+        Me.lblhora = New System.Windows.Forms.Label()
+        Me.lblFecha = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.pnlAdmin.SuspendLayout()
+        Me.pnlContenedor.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackColor = System.Drawing.Color.LightCyan
         Me.Panel1.Controls.Add(Me.lblBienvenido)
         Me.Panel1.Controls.Add(Me.lblPrincip)
         Me.Panel1.Controls.Add(Me.btnCerrPrinc)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(140, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(940, 32)
+        Me.Panel1.Size = New System.Drawing.Size(800, 32)
         Me.Panel1.TabIndex = 1
         '
         'lblBienvenido
         '
         Me.lblBienvenido.AutoSize = True
-        Me.lblBienvenido.Location = New System.Drawing.Point(22, 9)
+        Me.lblBienvenido.Location = New System.Drawing.Point(6, 11)
         Me.lblBienvenido.Name = "lblBienvenido"
         Me.lblBienvenido.Size = New System.Drawing.Size(63, 13)
         Me.lblBienvenido.TabIndex = 11
@@ -64,7 +70,7 @@ Partial Class Form1
         '
         Me.lblPrincip.AutoSize = True
         Me.lblPrincip.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrincip.Location = New System.Drawing.Point(488, 9)
+        Me.lblPrincip.Location = New System.Drawing.Point(377, 9)
         Me.lblPrincip.Name = "lblPrincip"
         Me.lblPrincip.Size = New System.Drawing.Size(46, 17)
         Me.lblPrincip.TabIndex = 4
@@ -78,7 +84,7 @@ Partial Class Form1
         Me.btnCerrPrinc.FlatAppearance.BorderSize = 0
         Me.btnCerrPrinc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrPrinc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrPrinc.Location = New System.Drawing.Point(904, 3)
+        Me.btnCerrPrinc.Location = New System.Drawing.Point(764, 3)
         Me.btnCerrPrinc.Name = "btnCerrPrinc"
         Me.btnCerrPrinc.Size = New System.Drawing.Size(33, 26)
         Me.btnCerrPrinc.TabIndex = 3
@@ -93,7 +99,9 @@ Partial Class Form1
         Me.btnClientes.FlatAppearance.BorderSize = 0
         Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClientes.Location = New System.Drawing.Point(5, 62)
+        Me.btnClientes.Image = CType(resources.GetObject("btnClientes.Image"), System.Drawing.Image)
+        Me.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClientes.Location = New System.Drawing.Point(5, 126)
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.Size = New System.Drawing.Size(135, 50)
         Me.btnClientes.TabIndex = 5
@@ -109,7 +117,9 @@ Partial Class Form1
         Me.btnProduc.FlatAppearance.BorderSize = 0
         Me.btnProduc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnProduc.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProduc.Location = New System.Drawing.Point(5, 118)
+        Me.btnProduc.Image = CType(resources.GetObject("btnProduc.Image"), System.Drawing.Image)
+        Me.btnProduc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnProduc.Location = New System.Drawing.Point(5, 182)
         Me.btnProduc.Name = "btnProduc"
         Me.btnProduc.Size = New System.Drawing.Size(135, 50)
         Me.btnProduc.TabIndex = 6
@@ -125,7 +135,9 @@ Partial Class Form1
         Me.btnVentas.FlatAppearance.BorderSize = 0
         Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVentas.Location = New System.Drawing.Point(5, 174)
+        Me.btnVentas.Image = CType(resources.GetObject("btnVentas.Image"), System.Drawing.Image)
+        Me.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnVentas.Location = New System.Drawing.Point(5, 238)
         Me.btnVentas.Name = "btnVentas"
         Me.btnVentas.Size = New System.Drawing.Size(135, 50)
         Me.btnVentas.TabIndex = 7
@@ -141,7 +153,9 @@ Partial Class Form1
         Me.btnReport.FlatAppearance.BorderSize = 0
         Me.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReport.Location = New System.Drawing.Point(5, 230)
+        Me.btnReport.Image = CType(resources.GetObject("btnReport.Image"), System.Drawing.Image)
+        Me.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReport.Location = New System.Drawing.Point(5, 294)
         Me.btnReport.Name = "btnReport"
         Me.btnReport.Size = New System.Drawing.Size(135, 50)
         Me.btnReport.TabIndex = 8
@@ -157,7 +171,9 @@ Partial Class Form1
         Me.btnBkp.FlatAppearance.BorderSize = 0
         Me.btnBkp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBkp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBkp.Location = New System.Drawing.Point(5, 286)
+        Me.btnBkp.Image = CType(resources.GetObject("btnBkp.Image"), System.Drawing.Image)
+        Me.btnBkp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBkp.Location = New System.Drawing.Point(5, 350)
         Me.btnBkp.Name = "btnBkp"
         Me.btnBkp.Size = New System.Drawing.Size(135, 50)
         Me.btnBkp.TabIndex = 9
@@ -173,7 +189,9 @@ Partial Class Form1
         Me.btnSalir.FlatAppearance.BorderSize = 0
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.Location = New System.Drawing.Point(5, 398)
+        Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
+        Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSalir.Location = New System.Drawing.Point(5, 430)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(135, 50)
         Me.btnSalir.TabIndex = 10
@@ -183,7 +201,7 @@ Partial Class Form1
         '
         'pnlAdmin
         '
-        Me.pnlAdmin.BackColor = System.Drawing.Color.White
+        Me.pnlAdmin.BackColor = System.Drawing.Color.LightCyan
         Me.pnlAdmin.Controls.Add(Me.btnSalir)
         Me.pnlAdmin.Controls.Add(Me.btnUsuarios)
         Me.pnlAdmin.Controls.Add(Me.btnClientes)
@@ -192,9 +210,9 @@ Partial Class Form1
         Me.pnlAdmin.Controls.Add(Me.btnReport)
         Me.pnlAdmin.Controls.Add(Me.btnBkp)
         Me.pnlAdmin.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlAdmin.Location = New System.Drawing.Point(0, 32)
+        Me.pnlAdmin.Location = New System.Drawing.Point(0, 0)
         Me.pnlAdmin.Name = "pnlAdmin"
-        Me.pnlAdmin.Size = New System.Drawing.Size(140, 460)
+        Me.pnlAdmin.Size = New System.Drawing.Size(140, 492)
         Me.pnlAdmin.TabIndex = 11
         '
         'btnUsuarios
@@ -205,7 +223,9 @@ Partial Class Form1
         Me.btnUsuarios.FlatAppearance.BorderSize = 0
         Me.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUsuarios.Location = New System.Drawing.Point(5, 6)
+        Me.btnUsuarios.Image = CType(resources.GetObject("btnUsuarios.Image"), System.Drawing.Image)
+        Me.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUsuarios.Location = New System.Drawing.Point(5, 70)
         Me.btnUsuarios.Name = "btnUsuarios"
         Me.btnUsuarios.Size = New System.Drawing.Size(135, 50)
         Me.btnUsuarios.TabIndex = 4
@@ -216,11 +236,38 @@ Partial Class Form1
         'pnlContenedor
         '
         Me.pnlContenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.pnlContenedor.Controls.Add(Me.lblhora)
+        Me.pnlContenedor.Controls.Add(Me.lblFecha)
         Me.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlContenedor.Location = New System.Drawing.Point(140, 32)
         Me.pnlContenedor.Name = "pnlContenedor"
         Me.pnlContenedor.Size = New System.Drawing.Size(800, 460)
         Me.pnlContenedor.TabIndex = 13
+        '
+        'lblhora
+        '
+        Me.lblhora.AutoSize = True
+        Me.lblhora.Font = New System.Drawing.Font("Microsoft Sans Serif", 29.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhora.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.lblhora.Location = New System.Drawing.Point(33, 359)
+        Me.lblhora.Name = "lblhora"
+        Me.lblhora.Size = New System.Drawing.Size(103, 44)
+        Me.lblhora.TabIndex = 1
+        Me.lblhora.Text = "hora"
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblFecha.Location = New System.Drawing.Point(37, 403)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(95, 31)
+        Me.lblFecha.TabIndex = 0
+        Me.lblFecha.Text = "Fecha"
+        '
+        'Timer1
+        '
         '
         'Form1
         '
@@ -228,8 +275,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(940, 492)
         Me.Controls.Add(Me.pnlContenedor)
-        Me.Controls.Add(Me.pnlAdmin)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlAdmin)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.IsMdiContainer = True
         Me.Name = "Form1"
@@ -238,6 +285,8 @@ Partial Class Form1
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.pnlAdmin.ResumeLayout(False)
+        Me.pnlContenedor.ResumeLayout(False)
+        Me.pnlContenedor.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -255,4 +304,7 @@ Partial Class Form1
     Friend WithEvents pnlContenedor As Panel
     Friend WithEvents lblBienvenido As Label
     Friend WithEvents btnUsuarios As Button
+    Friend WithEvents lblhora As Label
+    Friend WithEvents lblFecha As Label
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -64,6 +64,7 @@ Partial Class FormBkp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(800, 460)
         Me.Controls.Add(Me.lblActual)
         Me.Controls.Add(Me.lblBkp)

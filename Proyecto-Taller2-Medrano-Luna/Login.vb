@@ -10,18 +10,32 @@
         usuario = txtUsuar.Text
         contraseña = txtContr.Text
 
+
         If usuario = "santiago" And contraseña = "1234" Then
             Me.Hide()
             Dim nuevoForm As New MenuGerente
             nuevoForm.Show()
+
         ElseIf usuario = "nicolas" And contraseña = "1234" Then
             Me.Hide()
             Dim nuevoForm As New MenuVendedor
             nuevoForm.Show()
-        ElseIf usuario = "otro" And contraseña = "1234" Then
+        ElseIf usuario = "admin" And contraseña = "1234" Then
             Me.Hide()
             Dim nuevoForm As New Form1
             nuevoForm.Show()
+        Else
+            MsgBox("Datos de ingreso incorrectos", vbCritical, "Error")
         End If
     End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub BBorrar_Click(sender As Object, e As EventArgs) Handles BBorrar.Click
+        txtUsuar.Clear()
+        txtContr.Clear()
+    End Sub
+
 End Class

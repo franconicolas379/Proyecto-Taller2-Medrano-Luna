@@ -22,6 +22,7 @@ Partial Class MenuVendedor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuVendedor))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblBienvenido = New System.Windows.Forms.Label()
         Me.lblPrincip = New System.Windows.Forms.Label()
@@ -38,20 +39,20 @@ Partial Class MenuVendedor
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackColor = System.Drawing.Color.LightCyan
         Me.Panel1.Controls.Add(Me.lblBienvenido)
         Me.Panel1.Controls.Add(Me.lblPrincip)
         Me.Panel1.Controls.Add(Me.btnCerrPrinc)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(140, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(940, 32)
+        Me.Panel1.Size = New System.Drawing.Size(800, 32)
         Me.Panel1.TabIndex = 2
         '
         'lblBienvenido
         '
         Me.lblBienvenido.AutoSize = True
-        Me.lblBienvenido.Location = New System.Drawing.Point(22, 9)
+        Me.lblBienvenido.Location = New System.Drawing.Point(6, 10)
         Me.lblBienvenido.Name = "lblBienvenido"
         Me.lblBienvenido.Size = New System.Drawing.Size(63, 13)
         Me.lblBienvenido.TabIndex = 11
@@ -61,7 +62,7 @@ Partial Class MenuVendedor
         '
         Me.lblPrincip.AutoSize = True
         Me.lblPrincip.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrincip.Location = New System.Drawing.Point(488, 9)
+        Me.lblPrincip.Location = New System.Drawing.Point(377, 8)
         Me.lblPrincip.Name = "lblPrincip"
         Me.lblPrincip.Size = New System.Drawing.Size(46, 17)
         Me.lblPrincip.TabIndex = 4
@@ -75,7 +76,7 @@ Partial Class MenuVendedor
         Me.btnCerrPrinc.FlatAppearance.BorderSize = 0
         Me.btnCerrPrinc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrPrinc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrPrinc.Location = New System.Drawing.Point(904, 3)
+        Me.btnCerrPrinc.Location = New System.Drawing.Point(764, 3)
         Me.btnCerrPrinc.Name = "btnCerrPrinc"
         Me.btnCerrPrinc.Size = New System.Drawing.Size(33, 26)
         Me.btnCerrPrinc.TabIndex = 3
@@ -84,15 +85,15 @@ Partial Class MenuVendedor
         '
         'pnlVendedor
         '
-        Me.pnlVendedor.BackColor = System.Drawing.Color.White
+        Me.pnlVendedor.BackColor = System.Drawing.Color.LightCyan
         Me.pnlVendedor.Controls.Add(Me.btnSalir)
         Me.pnlVendedor.Controls.Add(Me.btnVentas)
         Me.pnlVendedor.Controls.Add(Me.btnClientes)
         Me.pnlVendedor.Controls.Add(Me.btnFacturas)
         Me.pnlVendedor.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlVendedor.Location = New System.Drawing.Point(0, 32)
+        Me.pnlVendedor.Location = New System.Drawing.Point(0, 0)
         Me.pnlVendedor.Name = "pnlVendedor"
-        Me.pnlVendedor.Size = New System.Drawing.Size(140, 460)
+        Me.pnlVendedor.Size = New System.Drawing.Size(140, 492)
         Me.pnlVendedor.TabIndex = 13
         '
         'btnSalir
@@ -103,7 +104,9 @@ Partial Class MenuVendedor
         Me.btnSalir.FlatAppearance.BorderSize = 0
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.Location = New System.Drawing.Point(5, 398)
+        Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
+        Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSalir.Location = New System.Drawing.Point(5, 430)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(135, 50)
         Me.btnSalir.TabIndex = 14
@@ -119,7 +122,9 @@ Partial Class MenuVendedor
         Me.btnVentas.FlatAppearance.BorderSize = 0
         Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVentas.Location = New System.Drawing.Point(5, 118)
+        Me.btnVentas.Image = CType(resources.GetObject("btnVentas.Image"), System.Drawing.Image)
+        Me.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnVentas.Location = New System.Drawing.Point(5, 182)
         Me.btnVentas.Name = "btnVentas"
         Me.btnVentas.Size = New System.Drawing.Size(135, 50)
         Me.btnVentas.TabIndex = 13
@@ -135,7 +140,9 @@ Partial Class MenuVendedor
         Me.btnClientes.FlatAppearance.BorderSize = 0
         Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClientes.Location = New System.Drawing.Point(5, 62)
+        Me.btnClientes.Image = CType(resources.GetObject("btnClientes.Image"), System.Drawing.Image)
+        Me.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClientes.Location = New System.Drawing.Point(5, 126)
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.Size = New System.Drawing.Size(135, 50)
         Me.btnClientes.TabIndex = 12
@@ -151,7 +158,9 @@ Partial Class MenuVendedor
         Me.btnFacturas.FlatAppearance.BorderSize = 0
         Me.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFacturas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFacturas.Location = New System.Drawing.Point(5, 6)
+        Me.btnFacturas.Image = CType(resources.GetObject("btnFacturas.Image"), System.Drawing.Image)
+        Me.btnFacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFacturas.Location = New System.Drawing.Point(5, 70)
         Me.btnFacturas.Name = "btnFacturas"
         Me.btnFacturas.Size = New System.Drawing.Size(135, 50)
         Me.btnFacturas.TabIndex = 7
@@ -174,8 +183,8 @@ Partial Class MenuVendedor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(940, 492)
         Me.Controls.Add(Me.pnlContenedor)
-        Me.Controls.Add(Me.pnlVendedor)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlVendedor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "MenuVendedor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
